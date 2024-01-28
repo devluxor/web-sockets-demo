@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client</title>
+</head>
+<body>
+  <h1>Collecting Raindrops</h1>
+  <div id="raindrops">
+  </div>
+  <script>
+    const ws = new WebSocket("ws://localhost:8888");
+
+    ws.addEventListener("open", () => {
+      console.log("We are connected!")
+    })
+
+    ws.addEventListener("message", (e) => {
+      const raindrop = document.createElement('div');
+      raindrop.className = 'raindrop';
+      raindrop.textContent = e.data;
+      document.getElementById('raindrops').append(raindrop);
+      console.log('message received');
+    })
+  </script>
+</body>
+</html>
