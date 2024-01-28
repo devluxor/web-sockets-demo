@@ -8,6 +8,7 @@
 
 # Resources
 - based off of this video: https://www.youtube.com/watch?v=FduLSXEHLng
+- ws classes: https://github.com/websockets/ws/blob/master/doc/ws.md
 
 # Web Socket Code:
 On Server:
