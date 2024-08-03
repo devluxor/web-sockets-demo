@@ -10,8 +10,10 @@
   <div id="raindrops">
   </div>
   <script>
+    // The client establishes a WebSocket connection to ws://localhost:8888.
     const ws = new WebSocket("ws://localhost:8888");
-
+    
+    // open event: Logs when the connection is successfully established.
     ws.addEventListener("open", () => {
       console.log("We are connected!")
     })
